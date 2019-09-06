@@ -1,3 +1,5 @@
+[React Project] Diceware password generator 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 This React project is to make a **password(passphrase) generator** inspired by Noam Chomsky's famous sentence, *"Colorless green ideas sleep furiously" and* Diceware passphrase.
