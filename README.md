@@ -1,4 +1,21 @@
+[React Project] Diceware password generator 
+(Document : https://www.notion.so/studyreact/React-Project-Diceware-password-generator-a0f03beae6814b6793749f82801c8a9b)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This React project is to make a **password(passphrase) generator** inspired by Noam Chomsky's famous sentence, *"Colorless green ideas sleep furiously" and* Diceware passphrase.
+
+Password strength is a function of length, complexity and unpredictability. So the generator will compose sentences with **5 words** that are grammatically correct but semantically nonsensical and it will contain **numbers** and **special characters** to be more complex.
+
+I will use Swedish vocabulary, special characters '!' and '?', numbers(0-9). 
+
+The structure of password will be:
+
+number + adjective 1 + adjective 2+ noun(subjective) + verb + adverb + special character
+
+And it will be possible to check the entropy of the passphrase.
+
+
 
 ## Available Scripts
 
