@@ -1,7 +1,22 @@
 html, body {
     padding: 0;
-    margin: 20px;
+    margin: 0;
     font-family: "Lato", arial, sans-serif;
+}
+
+.header{
+    margin: 0;
+    padding: 0;
+    height: 20vh;
+    width: 100vw;
+    background: yellow;
+    text-align: center;
+}
+
+h1{
+    margin: 0;
+    padding: 30px;
+    text-align: center;
 }
 
 button {
