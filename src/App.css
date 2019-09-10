@@ -2,52 +2,141 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: "Lato", arial, sans-serif;
+    background-color: lightslategray;
 }
 
+h1 {
+    font-size: 60px;
+}
 .header{
-    margin: 0;
-    padding: 0;
-    height: 20vh;
+    height: 25vh;
     width: 100vw;
-    background: yellow;
+    background: seashell;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-h1{
-    margin: 0;
-    padding: 30px;
-    text-align: center;
-}
 
 button {
     height: 40px;
-    width: 64px;
+    width: 150px;
+    font-size: 20px;
+    border: solid 0px deepskyblue;
+    border-radius: 50px;
+    background-color: darkslategrey;
+    color: snow;
+    margin: 30px;
 }
 
 .content {
     height: 100%;
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .passwordBox {
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
-
 }
 
-#password {
-    height: 350px;
+.password {
+    border-radius: 10px;
+    height: 50px;
     width: 150px;
-    border: 1px solid red;
-    margin: 10px;
+    margin: 3px;
     text-align: center;
-
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
+.password.pwNumCard {
+    width: 70px;
+    color: palevioletred;
+    background-color: palevioletred;
+    transition: background-color 1s linear;
+}
+
+.password.pwAdj1Card {
+    color:coral;
+    background-color: coral;
+    transition: background-color 1s linear 0.3s;
+}
+
+.password.pwAdj2Card {
+    color:seagreen;
+    background-color:seagreen;
+    transition: background-color 1s linear 0.6s;
+}
+
+.password.pwSubCard {
+    color: gold;
+    background-color: gold;
+    transition: background-color 1s linear 0.9s;
+}
+
+.password.pwVerbCard {
+    color: deepskyblue;
+    background-color: deepskyblue;
+    transition: background-color 1s linear 1.2s;
+}
+
+.password.pwAdvCard {
+    color: mediumpurple;
+    background-color: mediumpurple;
+    transition: background-color 1s linear 1.5s;
+}
+
+.password.pwSpecialCard {
+    width: 70px;
+    color: cadetblue;
+    background-color: cadetblue;
+    transition: background-color 1s linear 1.8s;
+}
+
+
+
+.password.pwNumCard.visible{
+    background-color:snow;
+}
+.password.pwAdj1Card.visible{
+    background-color: snow;
+}
+.password.pwAdj2Card.visible{
+    background-color: snow;
+}
+.password.pwSubCard.visible{
+    background-color: snow;
+}
+.password.pwVerbCard.visible{
+    background-color: snow;
+}
+.password.pwAdvCard.visible{
+    background-color: snow;
+}
+.password.pwSpecialCard.visible{
+    background-color: snow;
+}
+
 
 .entropy {
-
+    align-self: flex-end;
+    height: 30px;
+    width: 150px;
+    margin: 30px;
+    text-align: center;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

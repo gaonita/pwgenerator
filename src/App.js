@@ -22,89 +22,62 @@ class App extends React.Component {
         return arr[num]
     }
 
+
     static log2(n) {
         return Math.log(n) / Math.log(2)
     }
 
     show() {
-        if (this.state.visibility) {
-            this.setState({
-                visibility: false
-            })
-        } else {
-            this.setState({
-                visibility: true
-            })
-        }
+        this.setState({
+            visibility: !this.state.visibility
+        })
+
     };
 
 
     render() {
 
-
         const pwNum = Math.floor((Math.random() * 10));
         const pwAdj1 = App.randomeEl(adjectives);
+
+        //To not have duplicate adjectives
+        const pwAdj1Index = adjectives.indexOf(pwAdj1);
+        adjectives.splice(pwAdj1Index, 1);
         const pwAdj2 = App.randomeEl(adjectives);
+        adjectives.push(pwAdj1);
         const pwSub = App.randomeEl(subjectives);
         const pwVerb = App.randomeEl(verb);
         const pwAdv = App.randomeEl(adverb);
         const pwSpecial = specials.charAt(Math.floor(Math.random() * specials.length));
-        const entropy = App.log2(9) + (2 * App.log2(adjectives.length)) + App.log2(subjectives.length) + App.log2(verb.length) + App.log2(adverb.length) + App.log2(specials.length)
-        ;
+        const entropy = App.log2(9) + App.log2(adjectives.length) + App.log2(adjectives.length - 1)
+            + App.log2(subjectives.length) + App.log2(verb.length) + App.log2(adverb.length)
+            + App.log2(specials.length);
 
-        if (!this.state.visibility) {
-
-            return (
-                <div>
-                    <Header/>
-                    <div className="content">
-
-                        <div className="passwordBox">
-                            <div id="password">Number:</div>
-                            <div id="password">Adjective01:</div>
-                            <div id="password">Adjective02:</div>
-                            <div id="password">Subjective:</div>
-                            <div id="password">Verb:</div>
-                            <div id="password">Adverb:</div>
-                            <div id="password">Special:</div>
-                        </div>
-
-                        <div className="entropy">
-                            <p>Entropy:{entropy}</p>
-                        </div>
-
-                        <button id="generate-button" onClick={this.show}>Skapa lösenord</button>
+        return (
+            <div>
+                <Header/>
+                <div className="content">
+                    <div className="passwordBox">
+                        <div className={"password pwNumCard" + (this.state.visibility ? " visible" : "")}> {pwNum}</div>
+                        <div className={"password pwAdj1Card"+ (this.state.visibility ? " visible" : "")}>{pwAdj1}</div>
+                        <div className={"password pwAdj2Card"+ (this.state.visibility ? " visible" : "")}>{pwAdj2}</div>
+                        <div className={"password pwSubCard" + (this.state.visibility ? " visible": "")}>{pwSub}</div>
+                        <div className={"password pwVerbCard" + (this.state.visibility ? " visible": "")}>{pwVerb}</div>
+                        <div className={"password pwAdvCard"+ (this.state.visibility ? " visible": "")}>{pwAdv}</div>
+                        <div className={"password pwSpecialCard"+ (this.state.visibility ? " visible": "")}>{pwSpecial}</div>
                     </div>
+
+                    {this.state.visibility && <div className="entropy"> Entropy: {entropy} </div>}
+
+                    {this.state.visibility ?
+                    <button onClick={this.show}> Go back </button> :
+                        <button id="generate-button" onClick={this.show}>Get Password</button>
+                    }
                 </div>
-
-            )
-        }
-        else {
-            return (
-                <div>
-                    <Header/>
-                    <div className="content">
-                        <div className="passwordBox">
-                            <div id="password">Number:<br/> {pwNum} </div>
-                            <div id="password">Adjective01:<br/> {pwAdj1} </div>
-                            <div id="password">Adjective02:<br/> {pwAdj2} </div>
-                            <div id="password">Subjective:<br/> {pwSub} </div>
-                            <div id="password">Verb:<br/> {pwVerb} </div>
-                            <div id="password">Adverb:<br/> {pwAdv} </div>
-                            <div id="password">Special:<br/> {pwSpecial}</div>
-                        </div>
-
-                        <div className="entropy">
-                            <p>Entropy:{entropy}</p>
-                        </div>
-
-                        <button id="generate-button" onClick={this.show}>Go back</button>
-                    </div>
-                </div>
-
-            )
-        }
+            </div>
+        )
     }
+
 }
 
 export default App;
