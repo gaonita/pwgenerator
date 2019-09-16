@@ -6,6 +6,6 @@ const Header = () => {
             <h1>PASS PHRASE GENERATOR</h1>
         </div>
     )
-}
+};
 
 export default Header
