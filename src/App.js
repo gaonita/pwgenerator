@@ -4,6 +4,7 @@ import {adjectives, adverb, specials, subjectives, verb} from "./dictionary";
 
 import Header from "./Header";
 import Animation from "./Animation";
+import Slick from "./Slick";
 
 
 class App extends React.Component {
@@ -58,12 +59,15 @@ class App extends React.Component {
             + App.log2(subjectives.length) + App.log2(verb.length) + App.log2(adverb.length)
             + App.log2(specials.length);
 
-        //CSSTransition
+
 
 
         return <div>
 
             <Header/>
+
+            <Slick/>
+
             <Animation/>
 
             <div className="content">
