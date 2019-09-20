@@ -2,7 +2,7 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: "Lato", arial, sans-serif;
-    background-color: lightslategray;
+    background-color: linen;
 }
 
 h1 {
@@ -19,11 +19,13 @@ h1 {
     align-items: center;
 }
 
+
+
 button {
     height: 40px;
     width: 150px;
-    font-size: 20px;
-    border-radius: 50px;
+    font-size: 15px;
+    border-radius: 20px;
     background-color: darkslategrey;
     color: snow;
 }
@@ -184,7 +186,7 @@ button {
     }
 }
 
-/*CSSTransition*/
+/*CSSTransition, Animation*/
 
 .body {
     display: flex;
@@ -194,15 +196,15 @@ button {
 }
 
 .demo {
-    border: solid 1px gold;
     border-radius: 15px;
-    background-color: gold;
-    height: 15vh;
-    width: 90vw;
+    background-color: #fafafa;
+    height: 30vh;
+    width: 95vw;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-top: 50px;
+    margin-bottom: 30px;
     flex-wrap: wrap;
     box-shadow: dimgray;
 }
@@ -212,31 +214,120 @@ button {
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    background-color: whitesmoke;
-    height: 70px;
+    background-color: ghostwhite;
+    height: 130px;
     display: flex;
-    border-radius: 15px;
-    border: solid 4px grey;
+    /*border: solid 10px lightcyan;*/
 }
 
-/*.frame {*/
+.frame {
     /*overflow: hidden;*/
-    /*border: solid 1px rebeccapurple;*/
-    /*height: 30px;*/
-    /*text-align: center;*/
-/*}*/
+    /*border: solid 4px grey;*/
+    height: 70px;
+    width: 150px;
+    text-align: center;
+}
 
 .pwCard {
-    background-color: whitesmoke;
-    color: gray;
-    height: 4vh;
-    width: 10vw;
+    background-color: ghostwhite;
+    color: palevioletred;
+    height: 160px;
+    width: 100px;
     text-transform: capitalize;
     text-align: center;
     align-items: center;
     justify-content: center;
-    font-size: 1em;
+    font-size: 1.3em;
+    font-family: 'Turret Road', cursive;
+    font-weight: bold;
 }
+
+
+.machine {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: rgba(105, 105, 105, 0.6);
+    border-radius: 5px;
+    height: 40vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+justify-content: space-around;
+    box-shadow: 3px 3px 5px 3px rgb(9, 9, 19);
+
+}
+
+
+
+.container {
+    border-radius: 5px;
+    background-color: rgba(1, 1, 1, 0.9);
+    height: 30vh;
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 5px 3px rgb(9, 9, 19);
+
+}
+
+
+.slotbox{
+    height: 15vh;
+    width: 180px;
+    border-radius: 10px;
+    background-color: rgba(49, 49, 49, 0.67);
+    /*border: solid 3px rgba(249, 249, 249, 0.56);*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 3px 3px rgb(9, 9, 19);
+
+}
+
+
+.frame03 {
+    /*overflow: hidden;*/
+    /*border: solid 4px grey;*/
+    height: 30px;
+    width: 150px;
+    text-align: center;
+}
+
+
+.slots03 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: black;
+    height: 50px;
+    width: 150px;
+    display: flex;
+    border-radius: 10px;
+    /*border: solid 3px rgba(255, 69, 0, 0.16);*/
+    /*box-shadow: 3px 3px 5px 3px rgb(9, 9, 19);*/
+
+}
+
+.pwCard03 {
+    background-color: black;
+    color: greenyellow;
+    height: 100px;
+    width: 150px;
+    text-transform: capitalize;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'Turret Road', cursive;
+    font-weight: bold;
+
+}
+
 
 /*spin button*/
 .spin {
@@ -248,3 +339,123 @@ button {
 }
 
 
+.spinStart{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: none;
+    margin: 20px;
+    background-color: greenyellow;
+    color: #090913;
+    pointer-events : auto;
+    cursor:pointer;
+    box-shadow: 3px 3px 5px 0px rgb(9, 9, 19);
+}
+
+
+.spinStop{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: none;
+    margin: 20px;
+    background-color: #E14050;
+    pointer-events : auto;
+    cursor:pointer;
+    box-shadow: 3px 3px 5px 3px rgb(9, 9, 19);
+}
+
+
+
+
+/*lever */
+
+.lever {
+    padding: 15px;
+    margin-top: 5px;
+    background-color: #e0e0e0;
+    border: 1px solid #dadada;
+    display: inline-block;
+    box-shadow: 3px 3px 5px 0px rgb(9, 9, 19);
+    border-radius: 8px;
+}
+
+.track {
+    height: 200px;
+    width: 10px;
+    background-color: rgba(68, 68, 68, 0.9);
+    border: 1px solid #333;
+    position: relative;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -5px;
+    transition: transform .5s cubic-bezier(0.600, 0.040, 0.980, 0.335);
+}
+
+.ball > button {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: 0;
+    background: #E43012;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: 0;
+    transition: box-shadow .3s linear;
+}
+
+.ball > button:hover {
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4);
+}
+
+.ball > .ripple {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #E43012;
+    opacity: .3;
+
+    transform: scale(1);
+    transition: all .5s ease-in-out;
+}
+
+.lever.active .ripple {
+    transform: scale(2.5);
+    opacity: 0;
+}
+
+.stick {
+    position: absolute;
+    height: 20px;
+    width: 7px;
+    background: #a0a0a0;
+    left: 2px;
+    border-radius: 3px;
+
+    transition: transform .3s cubic-bezier(0.600, 0.040, 0.980, 0.335);
+    transition-delay: .2s;
+}
+
+.lever.on .stick {
+    transform: translateY(10px);
+}
+
+.lever.on .ball {
+    transform: translateY(0);
+}
+
+.lever.off .stick {
+    transform: translateY(20px);
+}
+
+.lever.off .ball {
+    transform: translateY(30px);
+}
