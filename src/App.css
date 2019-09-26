@@ -2,11 +2,12 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: "Turret Road", cursive;
-    background-color: ghostwhite;
+    background-color: lightgray;
 }
 
 h1 {
-    font-size: 60px;
+    color: darkslategrey;
+    font-size: 20px;
 }
 
 h4 {
@@ -18,14 +19,12 @@ h4 {
 .header {
     height: 150px;
     width: 100vw;
-    background: black;
-    text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Turret Road', cursive;
     font-weight: bold;
-    color: greenyellow;
 }
 
 .main {
@@ -44,8 +43,7 @@ ul {
 
 li {
     list-style: none;
-    font-size: 30px;
-    margin: 20px;
+    font-size: 15px;
 }
 
 .nav {
