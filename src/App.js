@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 import './App.css';
 import Header from "./Header";
 import Slick from "./Slick";
-
+//
 // import Main from "./Main";
 // import Animation from "./Animation";
 // import FirstVersion from "./firstVersion";
 // import {Switch, Route} from 'react-router-dom';
-//
+
 
 class App extends Component {
     render() {

@@ -5,9 +5,6 @@ import Slider from "react-slick";
 
 
 class Slick extends Component {
-
-    arrayOfStrings = [];
-
     constructor(props) {
         super(props);
         this.state = {
@@ -35,6 +32,7 @@ class Slick extends Component {
         this.grabSliderReference = this.grabSliderReference.bind(this);
     }
 
+
     static getRandom(array) {
         const response = [];
         for (let i = 0; i < 20; i++) {
@@ -43,20 +41,22 @@ class Slick extends Component {
         return response;
     }
 
-
     play() {
         this.setState({
             settings:{...this.state.settings, speed: 100, autoplay: true}
         });
-        this.arrayOfStrings.forEach(slider => {
+        this.sliders.forEach(slider => {
             slider.slickPlay();
         })
     }
 
+    sliders = [];
 
+    grabSliderReference(slider) {
+        this.sliders.push(slider)
+    }
 
-    stopSpin() {
-        console.log(this.state.settings.speed);
+    stopSpin(slide) {
         if(this.state.settings.speed < 1100){
             this.timeout = setTimeout(() => {
                 this.setState({
@@ -72,13 +72,11 @@ class Slick extends Component {
 
     }
 
-    // this.arrayOfStrings.forEach(slider => {
+    // this.sliders.forEach(slider => {
     //     slider.slickPause();
-    // })
+    // })}
 
-    grabSliderReference(slider) {
-        this.arrayOfStrings.push(slider)
-    }
+
 
     render() {
 
@@ -99,7 +97,9 @@ class Slick extends Component {
                                     }
                                 </div>
                             </div>
+                            <button className="spinStop" onClick={() => this.stopSpin(this.sliders[0])}>STOP</button>
                         </div>
+
 
                         <div className="slotbox">
                             <div className="slots03">
@@ -112,6 +112,7 @@ class Slick extends Component {
                                     }
                                 </div>
                             </div>
+                            <button className="spinStop" onClick={this.stopSpin}>STOP</button>
                         </div>
 
 
@@ -140,6 +141,7 @@ class Slick extends Component {
                                     }
                                 </div>
                             </div>
+                            <button className="spinStop" onClick={this.stopSpin}>STOP</button>
                         </div>
 
                         <div className="slotbox">
@@ -153,6 +155,7 @@ class Slick extends Component {
                                     }
                                 </div>
                             </div>
+                            <button className="spinStop" onClick={this.stopSpin}>STOP</button>
                         </div>
 
 
@@ -167,6 +170,7 @@ class Slick extends Component {
                                     }
                                 </div>
                             </div>
+                            <button className="spinStop" onClick={this.stopSpin}>STOP</button>
                         </div>
 
                         <div className="slotbox">
@@ -180,6 +184,8 @@ class Slick extends Component {
                                     }
                                 </div>
                             </div>
+                            <button className="spinStop" onClick={this.stopSpin}>STOP</button>
+
                         </div>
                     </div>
 
@@ -197,9 +203,9 @@ class Slick extends Component {
                         <button className="spinStart" onClick={this.play}>SPIN</button>
                     </div>
 
-                    <div className="buttonArea">
-                        <button className="spinStop" onClick={this.stopSpin}>STOP</button>
-                    </div>
+                    {/*<div className="buttonArea">*/}
+                        {/*<button className="spinStop" onClick={this.stopSpin}>STOP</button>*/}
+                    {/*</div>*/}
 
 
                 </div>
